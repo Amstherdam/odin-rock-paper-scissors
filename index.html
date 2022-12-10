@@ -8,8 +8,27 @@
     <title>Document</title>
 </head>
 <body>
-    
-
+    <h1>Rock, Paper, Scissors Game</h1>
+    <div class="buttons">
+        <button data-selection="rock" id="rock" title="rock" class="button">✊</button>
+        <button data-selection="paper" id="paper" title="paper" class="button">✋</button>
+        <button data-selection="scissors" id="scissors" title="scissors" class="button">✌</button>
+    </div>
+    <div class="results">
+        <div>
+            You
+            <span id="playerResult" class="result-score">0</span>
+        </div>
+        <div>
+            <span id="comResult" class="result-score">0</span>
+            Computer
+        </div>
+    </div>
+    <div class="buttons2">
+        <button class="computerChoice">✊</button>
+        <button class="computerChoice">✋</button>
+        <button class="computerChoice">✌</button>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
