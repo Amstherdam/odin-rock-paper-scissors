@@ -1,5 +1,12 @@
 body { 
     background-color: rgb(66, 56, 56);
+    font-family: 'Kenia', cursive;
+    letter-spacing: 7px;
+}
+
+h1 { 
+    text-align: center;
+    font-size: 4.5rem;
 }
 
 .buttons {
@@ -23,7 +30,7 @@ body {
 }
 
 .results { 
-    font-size: 3rem;
+    font-size: 4rem;
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
@@ -35,15 +42,6 @@ body {
     margin-left: .1rem;
     font-size: 2rem;
     color: #333;
-}
-
-.result-selection { 
-    opacity: .5;
-}
-
-.result-selection.winner { 
-    opacity: 1;
-    font-size: 3.7rem
 }
 
 .buttons2 {
@@ -62,14 +60,105 @@ body {
     transition: 500ms;
 }
 
+#computerRock { 
+    opacity: 0.5;
+}
+
+#computerPaper { 
+    opacity: 0.5;
+}
+
+#computerScissors { 
+    opacity: 0.5;
+}
+
 #comResult { 
-    color: red
+    color: red;
+    font-family: 'Anton', sans-serif;
+    font-size: 2.7rem;
 }
 
 #playerResult { 
     color: rgb(2, 192, 2);
+    font-family: 'Anton', sans-serif;
+    font-size: 2.7rem;
+}
+
+#playerWin { 
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    background-color: black;
+    color: aliceblue;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+}
+
+footer  {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    padding:15px;
+    background-color: rgb(36, 29, 29);
+    color: #ffc83d;
+}
+
+footer p  { 
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+}
+
+.fa-brands { 
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+a:-webkit-any-link { 
+    color: inherit;
+}
+
+#modal { 
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(36, 29, 29, 0.6);
+}
+
+.modalContent { 
+    width: 500px;
+    padding: 30px;
+    margin: 15% auto;
+    border: 2px solid #ffc83d;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 30px;
+    background-color: rgb(36, 29, 29);
+    color: #ffc83d;
+}
+
+#playAgain { 
+    margin-top: 10px;
+    background-color: rgb(36, 29, 29);
+    padding: 15px 30px;
+    font-size: 15px;
+    color: #ffc83d;
+    border: 1px solid #ffc83d;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 
-
+#playAgain:hover { 
+    background-color: rgb(49, 39, 39);
+}
 

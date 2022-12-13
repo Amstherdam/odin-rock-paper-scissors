@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kenia&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kenia&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
-    <h1>Rock, Paper, Scissors Game</h1>
+    <h1>Rock, Paper, Scissors </h1>
     <div class="buttons">
         <button data-selection="rock" id="rock" title="rock" class="button">✊</button>
         <button data-selection="paper" id="paper" title="paper" class="button">✋</button>
@@ -25,10 +34,29 @@
         </div>
     </div>
     <div class="buttons2">
-        <button class="computerChoice">✊</button>
-        <button class="computerChoice">✋</button>
-        <button class="computerChoice">✌</button>
+        <button id="computerRock" class="computerChoice">✊</button>
+        <button id="computerPaper" class="computerChoice">✋</button>
+        <button id="computerScissors" class="computerChoice">✌</button>
     </div>
+
+    <div>
+        <p id="raundResult"> </p>
+    </div>
+
+    <footer>
+        <p>
+            Copyright © 2021 Amstherdam 
+            <a href="https://github.com/Amstherdam"><i class="fa-brands fa-github"></i></a>
+        </p>
+    </footer>
+
+    <div id="modal">
+        <div class="modalContent">
+            <p id="message"></p>
+            <button onClick="document.location.reload(true)" id="playAgain">Play Again ?</button>
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
