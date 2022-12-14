@@ -84,9 +84,9 @@ function playRound(playerSelection) {
     else if (checkWinner(playerSelection, computerSelection) == 'Tie') { 
         result = 'Tie !';
     }
-    console.log(playerSelection, 'player', computerSelection, 'computer');
-    roundMessage.innerHTML = result;
 
+    roundMessage.innerHTML = result;
+    
     playerResult.textContent = playerScore;
     computerResult.textContent = computerScore;    
     game();
