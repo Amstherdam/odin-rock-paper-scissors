@@ -32,6 +32,7 @@ function getComputerChoice () {
     return randomChoiceValue;
 }
 
+
 function computerAnimate (computerSelection) { 
     if(computerSelection == 'rock') {
          computerRock.style.opacity = '1';
@@ -103,12 +104,3 @@ function game() {
         modalMessage.style.display = 'block';
     }
 };
-
-
-/////////////////////////////////////////////////////////////////////////
-
-
-
-
-
- 
