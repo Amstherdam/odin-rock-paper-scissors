@@ -12,7 +12,7 @@ const computerRock = document.getElementById('computerRock');
 const computerPaper = document.getElementById('computerPaper');
 const computerScissors = document.getElementById('computerScissors');
 const roundMessage = document.getElementById('raundResult');
-///
+
 
 const modal = document.getElementById('modal')
 buttons.forEach(button => {
@@ -23,15 +23,34 @@ buttons.forEach(button => {
     
 });
 
-//
+
 const choice = ['rock', 'paper', 'scissors']
 function getComputerChoice () { 
     const randomChoice = Math.floor(Math.random() * choice.length)
-    return choice[randomChoice];
+    const randomChoiceValue = choice[randomChoice]
+    computerAnimate(randomChoiceValue);
+    return randomChoiceValue;
 }
 
+function computerAnimate (computerSelection) { 
+    if(computerSelection == 'rock') {
+         computerRock.style.opacity = '1';
+         computerPaper.style.opacity = '0.5';
+         computerScissors.style.opacity = '0.5';
+     }
+     else if (computerSelection == 'paper') { 
+         computerPaper.style.opacity = '1';
+         computerScissors.style.opacity = '0.5';
+         computerRock.style.opacity = '0.5';
+     }
+     else if ( computerSelection == 'scissors') {
+         computerScissors.style.opacity = '1';
+         computerPaper.style.opacity = '0.5';
+         computerRock.style.opacity = '0.5';
+ }
+ };
 
-///
+
 function checkWinner(playerSelection, computerSelection) { 
     
     if(playerSelection == computerSelection) {
@@ -48,13 +67,9 @@ function checkWinner(playerSelection, computerSelection) {
         return 'Computer';
     }
 }
-//////
 
 
 function playRound(playerSelection) { 
-
-    playerResult.textContent = playerScore;
-    computerResult.textContent = computerScore;    
 
     let computerSelection = getComputerChoice();
 
@@ -71,12 +86,12 @@ function playRound(playerSelection) {
     }
     console.log(playerSelection, 'player', computerSelection, 'computer');
     roundMessage.innerHTML = result;
-    
-    game();
 
+    playerResult.textContent = playerScore;
+    computerResult.textContent = computerScore;    
+    game();
     }
     
-
 
 function game() {
     if(playerScore === 5) { 
@@ -93,23 +108,7 @@ function game() {
 /////////////////////////////////////////////////////////////////////////
 
 
-playRound();
 
 
-/* function computerAnimate (computerSelection) { 
-    if(computerSelection == 'rock') {
-        computerRock.style.opacity = '1';
-        computerPaper.style.opacity = '0.5';
-        computerScissors.style.opacity = '0.5';
-    }
-    else if (computerSelection == 'paper') { 
-        computerPaper.style.opacity = '1';
-        computerScissors.style.opacity = '0.5';
-        computerRock.style.opacity = '0.5';
-    }
-    else if ( computerSelection == 'scissors') {
-        computerScissors.style.opacity = '1';
-        computerPaper.style.opacity = '0.5';
-        computerRock.style.opacity = '0.5';
-}
-} */
+
+ 
